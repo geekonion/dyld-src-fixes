@@ -896,6 +896,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		012670072A3C5FF400427321 /* glue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = glue.h; sourceTree = "<group>"; };
 		370250D227392B66007C67A2 /* CRC32c.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CRC32c.cpp; sourceTree = "<group>"; };
 		370250D327392B66007C67A2 /* CRC32c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRC32c.h; sourceTree = "<group>"; };
 		3736CB562708F67100BDA046 /* SmartPointerTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SmartPointerTests.mm; sourceTree = "<group>"; };
@@ -1625,6 +1626,7 @@
 				F98B355124ED744200DE738B /* Tracing.cpp */,
 				F93B2BB3253662DE00AD8BA8 /* RosettaSupport.h */,
 				F98B356524ED744200DE738B /* glue.c */,
+				012670072A3C5FF400427321 /* glue.h */,
 				C1DE0A52254A4F21006E8953 /* BumpAllocator.h */,
 				F993988F26F005CC0074D515 /* dyld.dirty */,
 			);
@@ -3602,7 +3604,7 @@
 				);
 				OTHER_LDFLAGS = "-Wl,-exported_symbol,_main";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = macosx;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3628,7 +3630,7 @@
 				);
 				OTHER_LDFLAGS = "-Wl,-exported_symbol,_main";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = macosx;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3677,7 +3679,7 @@
 				OTHER_CFLAGS = "-DCHROOT_PATH=\\\"$(DERIVED_FILES_DIR)/TestRoot\\\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.apple.dyld.local-test-runner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = YES;
 				USER_HEADER_SEARCH_PATHS = $SRCROOT/testing/include;
 			};
@@ -3717,7 +3719,7 @@
 				OTHER_CFLAGS = "-DCHROOT_PATH=\\\"$(DERIVED_FILES_DIR)/TestRoot\\\"";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.apple.dyld.local-test-runner";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				STRIP_INSTALLED_PRODUCT = YES;
 				USER_HEADER_SEARCH_PATHS = $SRCROOT/testing/include;
 			};
@@ -3765,7 +3767,7 @@
 				);
 				PRELINK_FLAGS = "-exported_symbols_list $(SRCROOT)/testing/lib/test_support.exp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos";
@@ -3809,7 +3811,7 @@
 				);
 				PRELINK_FLAGS = "-exported_symbols_list $(SRCROOT)/testing/lib/test_support.exp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos";
@@ -3827,7 +3829,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -3836,7 +3838,7 @@
 			baseConfigurationReference = F98B35A324ED748E00DE738B /* base.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -3848,6 +3850,7 @@
 				INSTALLHDRS_SCRIPT_PHASE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -3859,6 +3862,7 @@
 				INSTALLHDRS_SCRIPT_PHASE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -3877,7 +3881,7 @@
 					"$(inherited)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -3889,7 +3893,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -3905,7 +3909,7 @@
 				);
 				INSTALL_PATH = /usr/local/bin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -3921,7 +3925,7 @@
 				INSTALL_PATH = /usr/local/bin;
 				"INSTALL_PATH[sdk=macosx*]" = /usr/bin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -3959,8 +3963,13 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DSUPPORT_ARCH_arm64e=1",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -3992,8 +4001,12 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-DSUPPORT_ARCH_arm64e=1",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -4018,7 +4031,7 @@
 				OTHER_CODE_SIGN_FLAGS = "--entitlements $SRCROOT/testing/run-static/jit_entitlement.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos watchsimulator iphonesimulator appletvsimulator";
 			};
 			name = Debug;
@@ -4038,7 +4051,7 @@
 				OTHER_CODE_SIGN_FLAGS = "--entitlements $SRCROOT/testing/run-static/jit_entitlement.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos watchsimulator iphonesimulator appletvsimulator";
 			};
 			name = Release;
@@ -4069,7 +4082,7 @@
 				OTHER_CFLAGS = "-DBOM_SUPPORT=1";
 				OTHER_TAPI_FLAGS = "-extra-public-header cache-builder/mrm_shared_cache_builder.h";
 				PRODUCT_NAME = slc_builder;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SUPPORTS_TEXT_BASED_API = YES;
 				TAPI_VERIFY_MODE = ErrorsOnly;
 			};
@@ -4102,7 +4115,7 @@
 				OTHER_CFLAGS = "-DBOM_SUPPORT=1";
 				OTHER_TAPI_FLAGS = "-extra-public-header cache-builder/mrm_shared_cache_builder.h";
 				PRODUCT_NAME = slc_builder;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SUPPORTS_TEXT_BASED_API = YES;
 				TAPI_VERIFY_MODE = ErrorsOnly;
 			};
@@ -4125,7 +4138,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = dyld.BuilderUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 			};
 			name = Debug;
@@ -4142,7 +4155,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = dyld.BuilderUnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 			};
 			name = Release;
@@ -4151,6 +4164,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C12657F1286FB94100048F94 /* dyld_inspect.xcconfig */;
 			buildSettings = {
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -4158,6 +4172,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C12657F1286FB94100048F94 /* dyld_inspect.xcconfig */;
 			buildSettings = {
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -4168,6 +4183,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INSTALLHDRS_SCRIPT_PHASE = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -4178,6 +4194,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				INSTALLHDRS_SCRIPT_PHASE = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -4204,7 +4221,7 @@
 				OTHER_LDFLAGS = "-Wl,-no_warn_inits";
 				OTHER_TAPI_FLAGS = "-extra-private-header $(SRCROOT)/cache-builder/kernel_collection_builder.h";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SUPPORTS_TEXT_BASED_API = YES;
 				TAPI_VERIFY_MODE = Pedantic;
 			};
@@ -4230,7 +4247,7 @@
 				OTHER_LDFLAGS = "-Wl,-no_warn_inits";
 				OTHER_TAPI_FLAGS = "-extra-private-header $(SRCROOT)/cache-builder/kernel_collection_builder.h";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SUPPORTS_TEXT_BASED_API = YES;
 				TAPI_VERIFY_MODE = Pedantic;
 			};
@@ -4245,6 +4262,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INSTALLHDRS_COPY_PHASE = YES;
 				PRODUCT_NAME = libdyld;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -4256,6 +4274,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INSTALLHDRS_COPY_PHASE = YES;
 				PRODUCT_NAME = libdyld;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -4279,7 +4298,7 @@
 				PRIVATE_HEADERS_FOLDER_PATH = "$(DRIVERKITROOT)/Runtime/usr/local/include/mach-o";
 				PRODUCT_NAME = dyld;
 				PUBLIC_HEADERS_FOLDER_PATH = "$(DRIVERKITROOT)/Runtime/usr/include/mach-o";
-				SDKROOT = driverkit.internal;
+				SDKROOT = driverkit;
 				SUPPORTS_TEXT_BASED_API = YES;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/$(DRIVERKITROOT)/Runtime/System/Library/Frameworks",
@@ -4316,7 +4335,7 @@
 				PRIVATE_HEADERS_FOLDER_PATH = "$(DRIVERKITROOT)/Runtime/usr/local/include/mach-o";
 				PRODUCT_NAME = dyld;
 				PUBLIC_HEADERS_FOLDER_PATH = "$(DRIVERKITROOT)/Runtime/usr/include/mach-o";
-				SDKROOT = driverkit.internal;
+				SDKROOT = driverkit;
 				SUPPORTS_TEXT_BASED_API = YES;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/$(DRIVERKITROOT)/Runtime/System/Library/Frameworks",
@@ -4352,9 +4371,10 @@
 				GCC_WARN_EFFECTIVE_CPLUSPLUS_VIOLATIONS = NO;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INSTALL_PATH = /usr/bin;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				PRODUCT_NAME = update_dyld_shared_cache;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -4374,7 +4394,7 @@
 				INSTALL_PATH = /usr/bin;
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				PRODUCT_NAME = update_dyld_shared_cache;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -4390,6 +4410,7 @@
 					"$(inherited)",
 				);
 				INSTALL_PATH = /usr/bin;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos";
@@ -4428,7 +4449,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SIMULATOR_DIR_NAME = "$(PLATFORM_FAMILY_NAME_$(DEVICE_PLATFORM_NAME)) $(IPHONE_SDK_MARKETING_VERSION)";
 				USER_HEADER_SEARCH_PATHS = (
 					./dyld,
@@ -4454,7 +4475,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SIMULATOR_DIR_NAME = "$(PLATFORM_FAMILY_NAME_$(DEVICE_PLATFORM_NAME)) $(IPHONE_SDK_MARKETING_VERSION)";
 				USER_HEADER_SEARCH_PATHS = (
 					./dyld,
@@ -4501,7 +4522,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "-DBUILDING_CLOSURE_UTIL=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -4536,7 +4557,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_CFLAGS = "-DBUILDING_CLOSURE_UTIL=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -4584,7 +4605,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = ./testing/include;
 			};
 			name = Debug;
@@ -4627,7 +4648,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = ./testing/include;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -4652,7 +4673,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dyld.DyldProcessConfigTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx watchos tvos";
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 			};
@@ -4671,7 +4692,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dyld.DyldProcessConfigTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx watchos tvos";
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 				VALIDATE_PRODUCT = YES;
@@ -4695,7 +4716,7 @@
 					"-DSUPPORT_ARCH_arm64e=1",
 				);
 				PRODUCT_NAME = dyld_shared_cache_util;
-				SDKROOT = macosx13.0;
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = macosx;
 				SUPPORTS_MACCATALYST = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -4719,7 +4740,7 @@
 					"-DSUPPORT_ARCH_arm64e=1",
 				);
 				PRODUCT_NAME = dyld_shared_cache_util;
-				SDKROOT = macosx13.0;
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = macosx;
 				SUPPORTS_MACCATALYST = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -4754,6 +4775,7 @@
 					"-Wl,-exported_symbol,_dyld_shared_cache_extract_dylibs_progress",
 				);
 				PRODUCT_NAME = dsc_extractor;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -4784,6 +4806,7 @@
 					"-Wl,-exported_symbol,_dyld_shared_cache_extract_dylibs_progress",
 				);
 				PRODUCT_NAME = dsc_extractor;
+				SDKROOT = macosx;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -4806,6 +4829,7 @@
 				LD_GENERATE_MAP_FILE = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos watchsimulator iphonesimulator appletvsimulator";
 				UNSTRIPPED_PRODUCT = NO;
 				USER_HEADER_SEARCH_PATHS = (
@@ -4834,6 +4858,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				LD_GENERATE_MAP_FILE = YES;
 				OTHER_CPLUSPLUSFLAGS = "$(OTHER_CFLAGS)";
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos watchsimulator iphonesimulator appletvsimulator";
 				UNSTRIPPED_PRODUCT = NO;
 				USER_HEADER_SEARCH_PATHS = (
@@ -4865,6 +4890,7 @@
 				PRIVATE_HEADERS_FOLDER_PATH = "/usr/local/include/mach-o";
 				PRODUCT_NAME = dyld;
 				PUBLIC_HEADERS_FOLDER_PATH = "/usr/include/mach-o";
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos watchsimulator iphonesimulator appletvsimulator";
 				SUPPORTS_TEXT_BASED_API = YES;
 				TAPI_VERIFY_MODE = Pedantic;
@@ -4889,6 +4915,7 @@
 				PRIVATE_HEADERS_FOLDER_PATH = "/usr/local/include/mach-o";
 				PRODUCT_NAME = dyld;
 				PUBLIC_HEADERS_FOLDER_PATH = "/usr/include/mach-o";
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos watchsimulator iphonesimulator appletvsimulator";
 				SUPPORTS_TEXT_BASED_API = YES;
 				TAPI_VERIFY_MODE = Pedantic;
@@ -4936,7 +4963,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = ./include;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = (
 					./dyld,
 					./common,
@@ -4982,7 +5009,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = ./include;
-				SDKROOT = macosx.internal;
+				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = (
 					./dyld,
 					./common,
@@ -5009,6 +5036,7 @@
 					"$(OTHER_CFLAGS)",
 				);
 				PRODUCT_NAME = dsc;
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos";
 			};
 			name = Debug;
@@ -5038,6 +5066,7 @@
 					"$(OTHER_CFLAGS)",
 				);
 				PRODUCT_NAME = dsc;
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos";
 				ZERO_LINK = NO;
 			};
@@ -5049,6 +5078,7 @@
 			buildSettings = {
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos watchsimulator iphonesimulator appletvsimulator";
 				SYSTEM_HEADER_SEARCH_PATHS = (
 					"$(SDKROOT)/System/Library/Frameworks/System.framework/PrivateHeaders",
@@ -5066,6 +5096,7 @@
 			baseConfigurationReference = F98B35A324ED748E00DE738B /* base.xcconfig */;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos watchos appletvos bridgeos watchsimulator iphonesimulator appletvsimulator";
 				SYSTEM_HEADER_SEARCH_PATHS = (
 					"$(SDKROOT)/System/Library/Frameworks/System.framework/PrivateHeaders",

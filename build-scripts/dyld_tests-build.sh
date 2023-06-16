@@ -13,7 +13,7 @@ OBJROOT_DRIVERKIT="${TARGET_TEMP_DIR}/driverkit"
 SYMROOT=${BUILD_DIR}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/dyld_tests
 SYMROOT_DRIVERKIT=${BUILD_DIR}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}/dyld_tests-driverkit
 OBJROOT=${PROJECT_TEMP_DIR}/${CONFIGURATION}${EFFECTIVE_PLATFORM_NAME}
-SDKROOT=${SDKROOT:-$(xcrun -sdk macosx.internal --show-sdk-path)}
+SDKROOT=${SDKROOT:-$(xcrun -sdk macosx --show-sdk-path)}
 
 case "$PLATFORM_NAME" in
     "bridgeos")

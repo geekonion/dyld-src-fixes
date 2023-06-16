@@ -48,6 +48,7 @@
 #include <mach-o/fat.h>
 #include <pthread.h>
 //#include <libc_private.h>
+#include "../dyld/glue.h"
 
 #include "Diagnostics.h"
 
@@ -123,8 +124,8 @@ bool Diagnostics::noError() const
 
 void Diagnostics::clearError()
 {
-    // if ( _buffer )
-    //     _simple_sfree(_buffer);
+    if ( _buffer )
+        _simple_sfree(_buffer);
     _buffer = nullptr;
 }
 

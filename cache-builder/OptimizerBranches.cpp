@@ -877,6 +877,7 @@ void StubOptimizer<P>::optimizeArm64CallSites(std::unordered_map<uint64_t, uint6
         return;
 }
 
+#if SUPPORT_ARCH_arm64_32
 template <typename P>
 void StubOptimizer<P>::redirectArm64_32CallSitesToIslands()
 {
@@ -952,6 +953,7 @@ void StubOptimizer<P>::redirectArm64_32CallSitesToIslands()
         return true;
     });
 }
+#endif
 
 template <typename P>
 void StubOptimizer<P>::redirectArm64CallSitesToIslands()
@@ -1127,9 +1129,11 @@ void StubOptimizer<P>::redirectCallSitesToIslands()
 #endif
                 redirectArm64CallSitesToIslands();
             break;
+#if SUPPORT_ARCH_arm64_32
         case CPU_TYPE_ARM64_32:
             redirectArm64_32CallSitesToIslands();
             break;
+#endif
         default:
             _diagnostics.error("stubs islands are unsupported for cpu type 0x%08X", _mh->cputype());
             break;

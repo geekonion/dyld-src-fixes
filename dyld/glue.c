@@ -48,6 +48,7 @@
 #include <corecrypto/ccdigest.h>
 #include <corecrypto/ccsha1.h>
 #include <corecrypto/ccsha2.h>
+#include "glue.h"
 
 #if TARGET_OS_SIMULATOR
 	#include "dyldSyscallInterface.h"
@@ -88,24 +89,6 @@
         uint64_t                    timestamp;
     };
 #endif
-
-// from _simple.h in libc
-typedef struct _SIMPLE*	_SIMPLE_STRING;
-extern void				_simple_vdprintf(int __fd, const char *__fmt, va_list __ap);
-extern void				_simple_dprintf(int __fd, const char *__fmt, ...);
-extern _SIMPLE_STRING	_simple_salloc(void);
-extern int				_simple_vsprintf(_SIMPLE_STRING __b, const char *__fmt, va_list __ap);
-extern void				_simple_sfree(_SIMPLE_STRING __b);
-extern char *			_simple_string(_SIMPLE_STRING __b);
-
-// dyld::log(const char* format, ...)
-extern void _ZN5dyld43logEPKcz(const char*, ...);
-
-// dyld::halt(const char* msg);
-extern void _ZN5dyld44haltEPKc(const char* msg) __attribute__((noreturn));
-
-extern void dyld_fatal_error(const char* errString) __attribute__((noreturn));
-
 
 // abort called by C++ unwinding code
 void abort()

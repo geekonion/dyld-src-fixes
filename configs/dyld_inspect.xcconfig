@@ -12,7 +12,7 @@ GCC_PREPROCESSOR_DEFINITIONS_Debug      = DEBUG=1
 GCC_PREPROCESSOR_DEFINITIONS            = $(GCC_PREPROCESSOR_DEFINITIONS_$(CONFIGURATION))
 
 // TODO: Can we just move these to the base.xcconfig?
-SDKROOT = macosx.internal
+SDKROOT = macosx
 SUPPORTED_PLATFORMS = macosx iphoneos watchos appletvos bridgeos;
 VERSIONING_SYSTEM = "apple-generic";
 

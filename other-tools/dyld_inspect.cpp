@@ -7,7 +7,7 @@
 #include <libproc.h>
 #include <mach/mach_init.h>
 #include <mach/mach_types.h>
-#include <System/sys/proc.h>
+//#include <System/sys/proc.h>
 #include <uuid/uuid.h>
 
 #include <mach-o/dyld_introspection.h>
@@ -91,7 +91,8 @@ int main(int argc, const char* argv[], const char* envp[], const char* apple[])
 
     auto handleProcess = ^(int pid, bool exitOnError) {
         task_t task;
-        if (task_read_for_pid(mach_task_self(), pid, &task) != KERN_SUCCESS) {
+//        if (task_read_for_pid(mach_task_self(), pid, &task) != KERN_SUCCESS) {
+        if (task_for_pid(mach_task_self(), pid, &task) != KERN_SUCCESS) {
             if ( exitOnError ) {
                 fprintf(stderr, "task_read_for_pid(%d) failed due to: %s\n", pid, strerror(errno));
                 if ( geteuid() != 0 ) {

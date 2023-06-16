@@ -30,6 +30,7 @@
 
 #include "Tracing.h"
 #include "DyldRuntimeState.h"
+#include "glue.h"
 
 // Workaround for header issues in rdar://49073930
 // #include <System/os/reason_private.h>
@@ -145,7 +146,9 @@ uint64_t kdebug_trace_dyld_duration_start(uint32_t code, kt_arg data1, kt_arg da
         data1.prepare(code);
         data2.prepare(code);
         data3.prepare(code);
+#ifdef DBG_FUNC_START
         kdebug_trace(code | DBG_FUNC_START, result, data1.value(), data2.value(), data3.value());
+#endif
         data3.destroy(code);
         data2.destroy(code);
         data1.destroy(code);
@@ -159,7 +162,9 @@ void kdebug_trace_dyld_duration_end(uint64_t trace_id, uint32_t code, kt_arg dat
         data1.prepare(code);
         data2.prepare(code);
         data3.prepare(code);
+#ifdef DBG_FUNC_END
         kdebug_trace(code | DBG_FUNC_END, trace_id, data1.value(), data2.value(), data3.value());
+#endif
         data3.destroy(code);
         data2.destroy(code);
         data1.destroy(code);
